@@ -165,9 +165,9 @@ elif app_mode =='Run on Video':
     height = int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps_input = int(vid.get(cv2.CAP_PROP_FPS))
 
-    #codec = cv2.VideoWriter_fourcc(*FLAGS.output_format)
-    codec = cv2.VideoWriter_fourcc('V','P','0','9')
-    out = cv2.VideoWriter('output1.mp4', codec, fps_input, (width, height))
+    codec = cv2.VideoWriter_fourcc(*'XVID')
+    #codec = cv2.VideoWriter_fourcc('V','P','0','9')
+    out = cv2.VideoWriter('output1.avi', codec, fps_input, (width, height))
 
     st.sidebar.text('Input Video')
     st.sidebar.video(tfflie.name)
